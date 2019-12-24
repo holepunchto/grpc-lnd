@@ -1,6 +1,6 @@
 {
   "name": "grpc-lnd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "instantiate a gRPC client for an LND node",
   "main": "index.js",
   "scripts": {
