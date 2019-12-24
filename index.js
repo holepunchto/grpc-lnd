@@ -47,5 +47,5 @@ function lightningRpc (opts) {
   // pass the credentials when creating a channel
   const lnrpcDescriptor = grpc.loadPackageDefinition(packageDefinition)
   const lnrpc = lnrpcDescriptor.lnrpc
-  return new lnrpc.Lightning(opts.port, credentials)
+  return new lnrpc.Lightning(opts.rpcPort, credentials)
 }
