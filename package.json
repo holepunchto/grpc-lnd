@@ -1,15 +1,24 @@
 {
-  "name": "@chm-diederichs/lnd-grpc",
+  "name": "grpc-lnd",
   "version": "1.0.0",
   "description": "instantiate a gRPC client for an LND node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Christophe Diederichs @chm-diederichs",
   "license": "ISC",
   "dependencies": {
     "@grpc/proto-loader": "^0.5.3",
     "grpc": "^1.24.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chm-diederichs/grpc-lnd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chm-diederichs/grpc-lnd/issues"
+  },
+  "homepage": "https://github.com/chm-diederichs/grpc-lnd#readme"
 }
