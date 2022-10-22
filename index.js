@@ -21,7 +21,7 @@ function lightningRpc (opts = {}) {
     opts.cert = fs.readFileSync(path.join(opts.lndDir, 'tls.cert')).toString('base64')
   }
 
-  const socket = opts.socket?.split(':')[1] || 10009
+  const socket = opts.socket || 'localhost:10009'
 
   // build metadata credentials
   const metadata = new grpc.Metadata()
