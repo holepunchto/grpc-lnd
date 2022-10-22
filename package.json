@@ -9,9 +9,10 @@
   "author": "Christophe Diederichs @chm-diederichs",
   "license": "ISC",
   "dependencies": {
-    "@grpc/proto-loader": "^0.5.3"
+    "@grpc/grpc-js": "^1.7.3",
+    "@grpc/proto-loader": "^0.5.3",
+    "b4a": "^1.6.1"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chm-diederichs/grpc-lnd.git"
