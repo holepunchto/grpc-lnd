@@ -5,6 +5,9 @@ const protoLoader = require('@grpc/proto-loader')
 const b4a = require('b4a')
 const { serviceTypes, packageTypes, protoFiles } = require('./services.json')
 
+const DEFAULT_HOST = 'localhost'
+const DEFAULT_PORT = '10009'
+
 process.env.GRPC_SSL_CIPHER_SUITES = 'HIGH+ECDSA'
 
 module.exports = lightningRpc
@@ -21,7 +24,14 @@ function lightningRpc (opts = {}) {
     opts.cert = fs.readFileSync(path.join(opts.lndDir, 'tls.cert')).toString('base64')
   }
 
-  const socket = opts.socket || 'localhost:10009'
+  let host = DEFAULT_HOST
+  let port = DEFAULT_PORT
+  if (opts.socket) {
+    const [hostOpt, portOpt] = opts.socket.split(':')
+    if (hostOpt) host = hostOpt
+    if (portOpt) port = portOpt
+  }
+  const socket = `${host}:${port}`
 
   // build metadata credentials
   const metadata = new grpc.Metadata()
